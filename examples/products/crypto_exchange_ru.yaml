@@ -1,0 +1,10 @@
+product_type: crypto_exchange
+channels:
+  - web
+  - mobile
+geography: RU
+features:
+  - p2p
+  - aml_strict
+  - case_mgmt
+description: "Криптобиржа с требованиями финмониторинга."

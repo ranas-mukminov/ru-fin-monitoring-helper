@@ -1,0 +1,2 @@
+{"event_type": "auth_login", "ts": "2024-05-01T10:00:00Z", "user_id": "u123", "result": "success", "source_ip": "10.0.0.1"}
+{"event_type": "auth_mfa", "ts": "2024-05-01T10:00:05Z", "user_id": "u123", "challenge_type": "totp", "result": "success"}

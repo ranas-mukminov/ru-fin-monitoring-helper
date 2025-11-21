@@ -1,0 +1,17 @@
+{
+  "title": "FinMon Overview",
+  "schemaVersion": 30,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Online Users",
+      "targets": [{"expr": "sum by(status) (finmon_auth_sessions)"}]
+    },
+    {
+      "type": "graph",
+      "title": "Suspicious Operations",
+      "targets": [{"query": "sum(rate(finmon_aml_flags[5m]))"}]
+    }
+  ],
+  "tags": ["finmon", "overview"]
+}

@@ -1,0 +1,37 @@
+event_name: auth_mfa
+description_ru: "Вызов и прохождение MFA (SMS, push, OTP)."
+category: auth
+criticality: high
+use_cases:
+  - fraud_detection
+  - aml
+  - audit
+fields:
+  - name: event_type
+    type: keyword
+    required: true
+    description: "Статичное значение auth_mfa"
+  - name: ts
+    type: datetime
+    required: true
+    description: "Время события в UTC"
+  - name: user_id
+    type: keyword
+    required: true
+    description: "Внутренний идентификатор пользователя/клиента"
+  - name: challenge_type
+    type: keyword
+    required: true
+    description: "Тип MFA (sms, push, totp)"
+  - name: result
+    type: keyword
+    required: true
+    description: "Результат (success/failed)"
+  - name: device_id
+    type: keyword
+    required: false
+    description: "Устройство, к которому привязан MFA"
+  - name: source_ip
+    type: ip
+    required: false
+    description: "IP-адрес источника"

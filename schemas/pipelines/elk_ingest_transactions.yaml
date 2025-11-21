@@ -1,0 +1,19 @@
+name: elk_ingest_transactions
+description: "Ingestion mapping for transaction events"
+version: 1
+fields:
+  - source: message
+    target: event_type
+    type: keyword
+  - source: "@timestamp"
+    target: ts
+    type: date
+  - source: txn.id
+    target: transaction_id
+    type: keyword
+  - source: txn.amount
+    target: amount
+    type: float
+  - source: txn.currency
+    target: currency
+    type: keyword

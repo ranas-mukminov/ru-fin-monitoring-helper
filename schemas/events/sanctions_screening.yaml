@@ -1,0 +1,36 @@
+event_name: sanctions_screening
+description_ru: "Проверка клиентов/контрагентов по санкционным и PEP спискам."
+category: sanctions
+criticality: high
+use_cases:
+  - aml
+  - audit
+fields:
+  - name: event_type
+    type: keyword
+    required: true
+    description: "Статичное значение sanctions_screening"
+  - name: ts
+    type: datetime
+    required: true
+    description: "Время проверки"
+  - name: user_id
+    type: keyword
+    required: true
+    description: "Клиент/контрагент"
+  - name: list
+    type: keyword
+    required: true
+    description: "Источник списка (opensanctions, ofac, eu, un, internal)"
+  - name: score
+    type: float
+    required: true
+    description: "Сходство/вероятность совпадения"
+  - name: result
+    type: keyword
+    required: true
+    description: "hit/no_hit/false_positive"
+  - name: matched_entity
+    type: keyword
+    required: false
+    description: "ID записи, если совпадение найдено"

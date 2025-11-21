@@ -1,0 +1,13 @@
+name: elk_ingest_auth
+description: "Ingestion mapping for authentication events"
+version: 1
+fields:
+  - source: message
+    target: event_type
+    type: keyword
+  - source: "@timestamp"
+    target: ts
+    type: date
+  - source: user.id
+    target: user_id
+    type: keyword

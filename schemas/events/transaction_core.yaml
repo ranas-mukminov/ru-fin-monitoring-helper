@@ -1,0 +1,53 @@
+event_name: transaction_core
+description_ru: "Основные этапы платежной транзакции: инициирование, авторизация, клиринг."
+category: transaction
+criticality: high
+use_cases:
+  - aml
+  - fraud_detection
+  - audit
+fields:
+  - name: event_type
+    type: keyword
+    required: true
+    description: "Статичное значение transaction_core"
+  - name: ts
+    type: datetime
+    required: true
+    description: "Время события"
+  - name: transaction_id
+    type: keyword
+    required: true
+    description: "Идентификатор транзакции"
+  - name: user_id
+    type: keyword
+    required: true
+    description: "Идентификатор клиента/кошелька"
+  - name: amount
+    type: float
+    required: true
+    description: "Сумма операции"
+  - name: currency
+    type: keyword
+    required: true
+    description: "Валюта операции"
+  - name: direction
+    type: keyword
+    required: true
+    description: "in/out"
+  - name: counterparty_country
+    type: keyword
+    required: false
+    description: "Страна контрагента"
+  - name: mcc
+    type: keyword
+    required: false
+    description: "MCC или тип транзакции"
+  - name: result
+    type: keyword
+    required: true
+    description: "authorized/declined/settled"
+  - name: trace_id
+    type: keyword
+    required: false
+    description: "Trace ID для корреляции с логами приложений"

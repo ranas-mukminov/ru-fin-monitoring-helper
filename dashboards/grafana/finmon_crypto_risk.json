@@ -1,0 +1,17 @@
+{
+  "title": "FinMon Crypto Risk",
+  "schemaVersion": 30,
+  "panels": [
+    {
+      "type": "graph",
+      "title": "High-Risk Country Flows",
+      "targets": [{"query": "sum by(country) (crypto_outflow_risk)"}]
+    },
+    {
+      "type": "stat",
+      "title": "PEP/Sanctions Matches",
+      "targets": [{"expr": "sum(rate(crypto_sanctions_hits[1h]))"}]
+    }
+  ],
+  "tags": ["finmon", "crypto"]
+}

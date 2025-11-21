@@ -1,0 +1,41 @@
+event_name: transaction_aml_flags
+description_ru: "Отметки и алерты AML по транзакциям: сработки правил, аномалии, санкции."
+category: aml
+criticality: high
+use_cases:
+  - aml
+  - audit
+  - finmon_sla
+fields:
+  - name: event_type
+    type: keyword
+    required: true
+    description: "Статичное значение transaction_aml_flags"
+  - name: ts
+    type: datetime
+    required: true
+    description: "Время события"
+  - name: transaction_id
+    type: keyword
+    required: true
+    description: "Связь с transaction_core"
+  - name: user_id
+    type: keyword
+    required: true
+    description: "Идентификатор клиента"
+  - name: rule_id
+    type: keyword
+    required: true
+    description: "Идентификатор правила/сценария"
+  - name: risk_score
+    type: float
+    required: true
+    description: "Риск-бал или вероятность"
+  - name: action
+    type: keyword
+    required: true
+    description: "Действие (review/block/allow)"
+  - name: comment
+    type: text
+    required: false
+    description: "Комментарий движка или аналитика"

@@ -1,0 +1,17 @@
+{
+  "title": "FinMon Operations SLA",
+  "schemaVersion": 30,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Avg KYC Processing Time (min)",
+      "targets": [{"expr": "avg(kyc_processing_minutes)"}]
+    },
+    {
+      "type": "graph",
+      "title": "AML Case Queue",
+      "targets": [{"query": "sum(finmon_cases_open) by (priority)"}]
+    }
+  ],
+  "tags": ["finmon", "sla"]
+}

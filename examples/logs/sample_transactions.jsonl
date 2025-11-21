@@ -1,0 +1,2 @@
+{"event_type": "transaction_core", "ts": "2024-05-01T10:02:00Z", "transaction_id": "t1", "user_id": "u123", "amount": 1000.0, "currency": "RUB", "direction": "out", "result": "authorized"}
+{"event_type": "transaction_aml_flags", "ts": "2024-05-01T10:02:01Z", "transaction_id": "t1", "user_id": "u123", "rule_id": "RISK-COUNTRY", "risk_score": 85, "action": "review"}

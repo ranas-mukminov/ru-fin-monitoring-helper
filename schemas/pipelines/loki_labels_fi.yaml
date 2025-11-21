@@ -1,0 +1,7 @@
+name: loki_labels_fi
+description: "Promtail label definitions for financial events"
+labels:
+  - event_type
+  - service
+  - env
+  - region

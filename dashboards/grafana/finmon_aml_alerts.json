@@ -1,0 +1,17 @@
+{
+  "title": "FinMon AML Alerts",
+  "schemaVersion": 30,
+  "panels": [
+    {
+      "type": "bar",
+      "title": "Top Rules by Volume",
+      "targets": [{"query": "topk(10, sum(rate(aml_alerts_total[15m])) by (rule_id))"}]
+    },
+    {
+      "type": "stat",
+      "title": "False Positive Rate",
+      "targets": [{"expr": "avg(aml_false_positive_ratio)"}]
+    }
+  ],
+  "tags": ["finmon", "aml"]
+}

@@ -1,0 +1,37 @@
+event_name: case_management
+description_ru: "Работа с кейсами финмон: создание, эскалация, закрытие."
+category: ops
+criticality: medium
+use_cases:
+  - aml
+  - audit
+  - finmon_sla
+fields:
+  - name: event_type
+    type: keyword
+    required: true
+    description: "Статичное значение case_management"
+  - name: ts
+    type: datetime
+    required: true
+    description: "Время события"
+  - name: case_id
+    type: keyword
+    required: true
+    description: "Идентификатор кейса"
+  - name: user_id
+    type: keyword
+    required: true
+    description: "Клиент, по которому ведется кейс"
+  - name: status
+    type: keyword
+    required: true
+    description: "open/escalated/closed"
+  - name: priority
+    type: keyword
+    required: false
+    description: "Приоритет кейса"
+  - name: action
+    type: keyword
+    required: false
+    description: "Какое действие выполнено (assign/escalate/close)"

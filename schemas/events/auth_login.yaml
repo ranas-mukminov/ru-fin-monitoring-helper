@@ -1,0 +1,41 @@
+event_name: auth_login
+description_ru: "Авторизация пользователя: успешные и неуспешные входы."
+category: auth
+criticality: high
+use_cases:
+  - fraud_detection
+  - aml
+  - audit
+fields:
+  - name: event_type
+    type: keyword
+    required: true
+    description: "Статичное значение auth_login"
+  - name: ts
+    type: datetime
+    required: true
+    description: "Время события в UTC"
+  - name: user_id
+    type: keyword
+    required: true
+    description: "Внутренний идентификатор пользователя/клиента"
+  - name: result
+    type: keyword
+    required: true
+    description: "Результат (success/failed/challenge)"
+  - name: source_ip
+    type: ip
+    required: true
+    description: "IP-адрес источника"
+  - name: device_id
+    type: keyword
+    required: false
+    description: "Идентификатор устройства/браузера"
+  - name: geo
+    type: keyword
+    required: false
+    description: "Географическое положение (страна/регион)"
+  - name: session_id
+    type: keyword
+    required: false
+    description: "Корреляционный идентификатор сессии"

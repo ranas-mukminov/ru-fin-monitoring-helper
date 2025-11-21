@@ -1,0 +1,13 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/fintech/app*.log
+    json.keys_under_root: true
+    json.add_error_key: true
+    fields:
+      service: fintech-api
+      env: dev
+
+output.logstash:
+  hosts: ["localhost:5044"]

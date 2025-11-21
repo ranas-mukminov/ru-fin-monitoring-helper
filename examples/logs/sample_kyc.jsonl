@@ -1,0 +1,2 @@
+{"event_type": "kyc_lifecycle", "ts": "2024-05-01T09:00:00Z", "user_id": "u123", "kyc_stage": "submitted", "result": "pending"}
+{"event_type": "kyc_lifecycle", "ts": "2024-05-01T09:30:00Z", "user_id": "u123", "kyc_stage": "approved", "result": "pass", "risk_score": 12}

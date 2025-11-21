@@ -1,0 +1,18 @@
+{
+  "index_patterns": ["finmon-kyc-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1
+    },
+    "mappings": {
+      "properties": {
+        "user_id": {"type": "keyword"},
+        "kyc_stage": {"type": "keyword"},
+        "result": {"type": "keyword"},
+        "risk_score": {"type": "float"},
+        "ts": {"type": "date"},
+        "event_type": {"type": "keyword"}
+      }
+    }
+  }
+}

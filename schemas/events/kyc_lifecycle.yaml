@@ -1,0 +1,41 @@
+event_name: kyc_lifecycle
+description_ru: "Этапы KYC/EDD: подача заявки, загрузка документов, результат проверки."
+category: kyc
+criticality: high
+use_cases:
+  - aml
+  - audit
+  - finmon_sla
+fields:
+  - name: event_type
+    type: keyword
+    required: true
+    description: "Статичное значение kyc_lifecycle"
+  - name: ts
+    type: datetime
+    required: true
+    description: "Время события"
+  - name: user_id
+    type: keyword
+    required: true
+    description: "Идентификатор клиента"
+  - name: kyc_stage
+    type: keyword
+    required: true
+    description: "Этап (submitted, document_upload, approved, rejected, edd)"
+  - name: result
+    type: keyword
+    required: true
+    description: "Результат проверки"
+  - name: country
+    type: keyword
+    required: false
+    description: "Страна резидентства"
+  - name: risk_score
+    type: float
+    required: false
+    description: "Расчетный риск-показатель"
+  - name: reviewer
+    type: keyword
+    required: false
+    description: "Кто принял решение (system/analyst)"

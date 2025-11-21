@@ -1,0 +1,9 @@
+product_type: psp
+channels:
+  - web
+  - api
+geography: RU
+features:
+  - cards
+  - merchants
+description: "Пример российского платёжного шлюза (PSP)."

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opensanctions-client"
+version = "0.1.0"
+description = "Sample OpenSanctions client wrapper"
+readme = "../../README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31.0"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sanctions*"]

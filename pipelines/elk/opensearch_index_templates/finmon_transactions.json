@@ -1,0 +1,18 @@
+{
+  "index_patterns": ["finmon-transaction_*", "finmon-transaction_core*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1
+    },
+    "mappings": {
+      "properties": {
+        "transaction_id": {"type": "keyword"},
+        "user_id": {"type": "keyword"},
+        "amount": {"type": "double"},
+        "currency": {"type": "keyword"},
+        "ts": {"type": "date"},
+        "event_type": {"type": "keyword"}
+      }
+    }
+  }
+}

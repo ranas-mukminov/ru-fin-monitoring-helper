@@ -1,0 +1,8 @@
+product_type: p2p_wallet
+channels:
+  - mobile
+geography: RU
+features:
+  - p2p
+  - cards
+description: "Кошелёк для P2P переводов."
